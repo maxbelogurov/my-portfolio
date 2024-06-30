@@ -1,0 +1,9 @@
+.default-enter-active,
+.default-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.default-enter-from,
+.default-leave-to {
+  opacity: 0;
+}

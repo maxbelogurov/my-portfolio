@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title": "Портфолио",
+    "subtitle": "Максима Белогурова",
+    "btn_language_change": "EN"
+  },
+  "nav_main": {
+    "works": "Проекты",
+    "about": "О себе",
+    "contacts": "Контакты"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title": "Portfolio of",
+    "subtitle": "Maksim Belogurov",
+    "btn_language_change": "RU"
+  },
+  "nav_main": {
+    "works": "Works",
+    "about": "About",
+    "contacts": "Contacts"
+  }
+}

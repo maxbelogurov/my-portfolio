@@ -1,0 +1,38 @@
+body, p, span, div, h1, h2, h3, h4, h5, h6,{
+  color:$my-dark !important;
+}
+.btn-clear {
+  border: none;
+  background: none;
+}
+.nav-header {
+  .nav-link {
+    font-size: px-to-rem(20);
+  }
+}
+.link-orange-hover {
+  color: $my-dark;
+  &:focus {
+    color: $my-dark;
+  }
+  &:hover:not(.active) {
+    color: $my-dark;
+    background: linear-gradient(to left,  $my-dark 20%, $my-orange 40%, $my-dark 60%, $my-dark 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    @keyframes shine {
+      from {
+        background-position-x: 120%;
+      }
+      to {
+        background-position-x: 0%; //0
+      }
+    }
+  }
+}
