@@ -1,23 +1,42 @@
+:root {
+  --bg-dark: #ffffff;
+  --font-dark: rgb(30, 30, 30);
+  --font-secondary: rgba(33, 37, 41, 0.75);
+}
+
+[data-theme="dark"] {
+  --bg-dark: rgb(30, 30, 30);
+  --font-dark: rgb(250, 250, 250);
+  --font-secondary: rgba(196, 217, 238, 0.75);
+}
+html, body {
+  background-color: var(--bg-dark);
+}
 body, p, span, div, h1, h2, h3, h4, h5, h6,{
-  color:$my-dark !important;
+  color:var(--font-dark) !important;
 }
 .btn-clear {
   border: none;
   background: none;
+  color: var(--font-dark)
 }
 .nav-header {
   .nav-link {
     font-size: px-to-rem(20);
   }
 }
+.text-muted {
+  color: var(--font-secondary) !important;
+}
 .link-orange-hover {
-  color: $my-dark;
+  color: var(--font-dark);
+  -webkit-text-fill-color: var(--font-dark);;
   &:focus {
-    color: $my-dark;
+    color: var(--font-dark);
   }
   &:hover:not(.active) {
-    color: $my-dark;
-    background: linear-gradient(to left,  $my-dark 20%, $my-orange 40%, $my-dark 60%, $my-dark 80%);
+    color: var(--font-dark);
+    background: linear-gradient(to left, var(--font-dark) 20%, $my-orange 40%, var(--font-dark) 60%, var(--font-dark) 80%);
     background-size: 200% auto;
     background-clip: text;
     text-fill-color: transparent;
@@ -31,7 +50,7 @@ body, p, span, div, h1, h2, h3, h4, h5, h6,{
         background-position-x: 120%;
       }
       to {
-        background-position-x: 0%; //0
+        background-position-x: 0%;
       }
     }
   }

@@ -2,14 +2,16 @@ import { defineStore } from 'pinia';
 
 export const useMainStore = defineStore('main', {
     state: () => ({
-        scheme: 'dark',
+        theme: 'light',
     }),
     getters: {
-        getScheme: (state) => state.scheme,
+        getTheme: (state) => state.theme,
     },
     actions: {
-        setScheme(theme) {
-            this.scheme = theme
+        setTheme(theme) {
+            this.theme = theme
+            document.documentElement.setAttribute('data-theme', theme)
+            localStorage.setItem('theme', theme);
         },
     },
 })

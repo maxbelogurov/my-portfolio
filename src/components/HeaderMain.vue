@@ -17,9 +17,9 @@
             </li>
           </ul>
         </nav>
-        <div class="col text-end">
+        <div class="col d-flex justify-content-end gap-3">
           <ChangeLanguage/>
-          <ChangeColorScheme/>
+          <ChangeTheme/>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
 <script setup >
 import ChangeLanguage from '@/modules/ChangeLanguage.vue'
-import ChangeColorScheme from "@/modules/ChangeColorScheme.vue";
+import ChangeTheme from "@/modules/ChangeTheme.vue";
 import {ref} from "vue";
 
 const nav = ref([
