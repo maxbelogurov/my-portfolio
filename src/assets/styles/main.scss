@@ -1,24 +1,34 @@
+button:focus,
+input:focus,
+select:focus {
+  box-shadow: none !important;
+}
 :root {
-  --bg-dark: #ffffff;
+  --bg-light: #ffffff;
+  --bg-second: #9891b8;
   --font-dark: rgb(30, 30, 30);
   --font-secondary: rgba(33, 37, 41, 0.75);
 }
 
 [data-theme="dark"] {
-  --bg-dark: rgb(30, 30, 30);
+  --bg-light: rgb(30, 30, 30);
+  --bg-second: #423a6d;
   --font-dark: rgb(250, 250, 250);
   --font-secondary: rgba(196, 217, 238, 0.75);
 }
-html, body {
-  background-color: var(--bg-dark);
-}
-body, p, span, div, h1, h2, h3, h4, h5, h6,{
+body, p, span, div, h1, h2, h3, h4, h5, h6 {
   color:var(--font-dark) !important;
+  transition: color .4s ease;
+}
+#app {
+  background: var(--bg-light);
+  transition: all .4s ease-in;
+  min-height: 100vh;
 }
 .btn-clear {
   border: none;
   background: none;
-  color: var(--font-dark)
+  color: var(--font-dark);
 }
 .nav-header {
   .nav-link {
@@ -50,7 +60,7 @@ body, p, span, div, h1, h2, h3, h4, h5, h6,{
         background-position-x: 120%;
       }
       to {
-        background-position-x: 0%;
+        background-position-x: 0;
       }
     }
   }

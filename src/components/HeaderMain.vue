@@ -1,23 +1,29 @@
 <template>
-  <header>
+  <header class="pt-3">
     <div class="container-xxl">
-      <div class="row row-cols-3 align-items-center">
-        <div class="col">
+      <div class="mobile-menu d-block d-md-none"
+           :class="mobileMenuActive ? 'active' : ''">
+        <NavMain direction="column"/>
+      </div>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-2 d-md-none">
+          <div @click="mobileMenuActive = !mobileMenuActive" class="burger-wrap">
+            <div class="icon-burger"
+                 :class="mobileMenuActive ? 'active' : ''">
+              <span v-for="i in 3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-md-4 col-lg-3 text-center text-md-start">
           <h4 class="mb-0">
             {{ $t('header.title') }}<br>
             <span class="text-muted small">{{ $t('header.subtitle') }}</span>
           </h4>
         </div>
-        <nav class="col">
-          <ul class="nav nav-header justify-content-center">
-            <li v-for="item in nav"
-                :key="item"
-                class="nav-item">
-              <a class="nav-link link-orange-hover" aria-current="page" href="#">{{ $t('nav_main.' + item) }}</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="col d-flex justify-content-end gap-3">
+        <div class="col-6 col-lg-7 d-none d-md-block">
+          <NavMain />
+        </div>
+        <div class="col-2 d-flex justify-content-end gap-3">
           <ChangeLanguage/>
           <ChangeTheme/>
         </div>
@@ -29,13 +35,14 @@
 <script setup >
 import ChangeLanguage from '@/modules/ChangeLanguage.vue'
 import ChangeTheme from "@/modules/ChangeTheme.vue";
-import {ref} from "vue";
+import NavMain from "@/components/NavMain.vue";
+import { ref } from "vue";
+import { useMainStore } from "@/stores/mainStore";
+const mainStore = useMainStore()
 
-const nav = ref([
-  "works",
-  "about",
-  "contacts"
-])
+const mobileMenuActive = ref(false)
+
+
 </script>
 
 <style lang="scss">
@@ -44,4 +51,60 @@ const nav = ref([
     font-size: px-to-rem(20);
   }
 }
+.burger-wrap {
+  position: relative;
+  z-index: 20;
+}
+.icon-burger {
+  display: flex;
+  flex-direction: column;
+  width: 26px;
+  span {
+    display: block;
+    background: var(--font-dark);
+    margin: 2px 0;
+    height: px-to-rem(4);
+    border-radius: 10px;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  span:nth-of-type(1) {
+    width: 50%;
+  }
+  span:nth-of-type(2) {
+    width: 100%;
+  }
+  span:nth-of-type(3) {
+    width: 75%;
+  }
+  &.active {
+    span:nth-of-type(1) {
+      transform-origin:bottom;
+      transform:rotatez(45deg) translate(3px,0px)
+    }
+    span:nth-of-type(2) {
+      transform-origin:top;
+      transform:rotatez(-45deg)
+    }
+    span:nth-of-type(3) {
+      transform-origin:bottom;
+      width:56%;
+      transform: translate(10px,-5px) rotatez(45deg);
+    }
+  }
+}
+.mobile-menu {
+  position: absolute;
+  z-index: 10;
+  background: var(--bg-second);
+  left: 0;
+  top: -50%;
+  width: 100%;
+  height: 50%;
+  transition: all .4s ease-in;
+  &.active {
+    top: 0;
+    transition: all .4s ease-in;
+  }
+}
+
 </style>

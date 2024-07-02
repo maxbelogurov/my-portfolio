@@ -1,5 +1,5 @@
 <template>
-    <button class="btn-clear"
+    <button class="btn-clear me-2"
             @click="changeTheme()">
       <Transition>
         <div v-if="mainStore.getTheme === 'dark'" class="icon-scheme">
@@ -18,20 +18,12 @@
 
 <script setup>
 import { useMainStore } from "@/stores/mainStore";
-import {ref} from "vue";
 const mainStore = useMainStore()
-const test = ref(true)
 function changeTheme() {
   const themeNow = mainStore.getTheme
   const themeNew = themeNow === 'dark' ? 'light' : 'dark'
   mainStore.setTheme(themeNew)
 }
-
-function setSelectedTheme() {
-  const theme = localStorage.getItem('theme');
-  if (theme) { mainStore.setTheme(theme) }
-}
-setSelectedTheme();
 
 </script>
 
@@ -44,20 +36,20 @@ setSelectedTheme();
   }
 }
 .v-enter-from {
-  right: 20px;
+  transform: scale(0);
   opacity: 0;
 }
 .v-enter-to {
-  right: 0;
+  transform: scale(1);
   opacity: 1;
 }
 .v-leave-from {
   opacity: 1;
-  left: 0px;
+  transform: scale(1);
 }
 .v-leave-to {
   opacity: 0;
-  left: 20px;
+  transform: scale(0);
 }
 .v-enter-active,
 .v-leave-active {
