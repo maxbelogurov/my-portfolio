@@ -4,6 +4,7 @@
       <div class="mobile-menu d-block d-md-none"
            :class="mobileMenuActive ? 'active' : ''">
         <NavMain direction="column"/>
+        <MobileMenuBg/>
       </div>
       <div class="row align-items-center justify-content-between">
         <div class="col-2 d-md-none">
@@ -36,6 +37,7 @@
 import ChangeLanguage from '@/modules/ChangeLanguage.vue'
 import ChangeTheme from "@/modules/ChangeTheme.vue";
 import NavMain from "@/components/NavMain.vue";
+import MobileMenuBg from "../modules/MobileMenuBg.vue";
 import { ref } from "vue";
 import { useMainStore } from "@/stores/mainStore";
 const mainStore = useMainStore()
@@ -95,15 +97,19 @@ const mobileMenuActive = ref(false)
 .mobile-menu {
   position: absolute;
   z-index: 10;
-  background: var(--bg-second);
+  opacity: 0;
   left: 0;
-  top: -50%;
+  top: -60%;
   width: 100%;
   height: 50%;
   transition: all .4s ease-in;
   &.active {
     top: 0;
+    opacity: 1;
     transition: all .4s ease-in;
+  }
+  &__bg {
+   z-index: 100;
   }
 }
 

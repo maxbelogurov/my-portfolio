@@ -3,19 +3,7 @@ input:focus,
 select:focus {
   box-shadow: none !important;
 }
-:root {
-  --bg-light: #ffffff;
-  --bg-second: #9891b8;
-  --font-dark: rgb(30, 30, 30);
-  --font-secondary: rgba(33, 37, 41, 0.75);
-}
 
-[data-theme="dark"] {
-  --bg-light: rgb(30, 30, 30);
-  --bg-second: #423a6d;
-  --font-dark: rgb(250, 250, 250);
-  --font-secondary: rgba(196, 217, 238, 0.75);
-}
 body, p, span, div, h1, h2, h3, h4, h5, h6 {
   color:var(--font-dark) !important;
   transition: color .4s ease;

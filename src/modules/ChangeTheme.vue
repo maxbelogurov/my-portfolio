@@ -1,5 +1,5 @@
 <template>
-    <button class="btn-clear me-2"
+    <button class="btn-clear me-2 change-theme"
             @click="changeTheme()">
       <Transition>
         <div v-if="mainStore.getTheme === 'dark'" class="icon-scheme">
@@ -28,6 +28,10 @@ function changeTheme() {
 </script>
 
 <style scoped lang="scss">
+.change-theme {
+  position: relative;
+  z-index: 10;
+}
 .icon-scheme {
   position: relative;
   top: px-to-rem(-7);

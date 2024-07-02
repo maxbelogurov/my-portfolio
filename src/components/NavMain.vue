@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="nav nav-header justify-content-center"
+    <ul class="nav nav-header justify-content-center mt-3 mt-md-0 gap-4 gap-lg-0"
         :class="props.direction ? `flex-${props.direction}` : ''">
       <li v-for="item in nav"
           :key="item"
@@ -27,6 +27,8 @@ const nav = ref([
 
 <style lang="scss">
 .nav-header {
+  position: relative;
+  z-index: 10;
   .nav-link {
     font-size: px-to-rem(20);
   }
