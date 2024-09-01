@@ -8,5 +8,8 @@
     "works": "Проекты",
     "about": "О себе",
     "contacts": "Контакты"
+  },
+  "projects": {
+    "btn_website": "Сайт"
   }
 }

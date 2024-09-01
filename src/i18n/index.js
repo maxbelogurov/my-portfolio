@@ -6,7 +6,7 @@ const messages = {
     en
 }
 export const options = {
-    legacy: true,
+    legacy: false,
     locale: defaultLocale,
     fallbackLocale: 'ru',
     messages,

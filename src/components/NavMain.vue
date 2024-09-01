@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="nav nav-header justify-content-center mt-3 mt-md-0 gap-4 gap-lg-0"
+    <ul class="nav nav-header justify-content-center mt-3 mt-md-0 gap-4 gap-md-0"
         :class="props.direction ? `flex-${props.direction}` : ''">
       <li v-for="item in nav"
           :key="item"

@@ -61,6 +61,7 @@ const mobileMenuActive = ref(false)
   display: flex;
   flex-direction: column;
   width: 26px;
+  caret-color: transparent;
   span {
     display: block;
     background: var(--font-dark);

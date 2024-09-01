@@ -9,6 +9,7 @@
 </template>
 
 <script>
+//use Option API because i18n doesn't work with Composition API.
 export default {
   name: "changeLanguage",
   methods: {
