@@ -1,8 +1,12 @@
 <template>
-  <div class="col-12 col-lg-6 mb-5">
+  <div class="col-12 col-lg-6 mb-4">
     <div class="work-card rounded-3 p-4 d-flex flex-column flex-sm-row gap-4">
-      <div v-if="props.project.images?.length" class="work-card__slider rounded-3">
-        <ProjectSlider :images="project.images"/>
+      <div class="work-card-bg-line" :style="`background-color: ${projectColor()}`"></div>
+      <div v-if="props.project.images?.length > 1" class="work-card__slider rounded-3">
+        <ProjectSlider :images="project.images" :color="projectColor()"/>
+      </div>
+      <div v-else-if="props.project.images?.length === 1" class="work-card__slider rounded-3">
+        <img class="single-img" :src="`src/assets/images/works/${props.project.images[0]}`" alt="">
       </div>
       <div class="work-card__body d-flex flex-column justify-content-between gap-4 gp-md-0">
         <div>
@@ -17,8 +21,8 @@
                class="stack-logo">
         </div>
         <div class="work-card__body-bottom d-flex justify-content-between">
-          <a v-if="props.project.git" :href="props.project.git" class="btn-clear btn-card">Github</a>
-          <a :href="props.project.website" target="_blank" class="btn-clear btn-card ms-auto">{{ $t('projects.btn_website') }}</a>
+          <a v-if="props.project.git" :href="props.project.git" class="btn-clear btn-card" target="_blank">Github</a>
+          <WaterButton class="ms-auto" :color="projectColor()" :text="$t('projects.btn_website')" :href="props.project.website" :target_blank="true"/>
         </div>
       </div>
     </div>
@@ -27,9 +31,20 @@
 
 <script setup>
 import ProjectSlider from '../components/ProjectSlider.vue'
+import WaterButton from '../modules/WaterButton.vue'
+import {computed} from "vue";
 const props = defineProps({
   project: Object
 })
+function projectColor() {
+  const section = props.project.section
+  const colorsSections = {
+    'Vue': '#42B883',
+    'Js': '#ddc60e',
+    'Layout': '#519adb',
+  }
+  return colorsSections[section]
+}
 </script>
 
 <style lang="scss">
@@ -41,7 +56,7 @@ const props = defineProps({
   background-color: var(--bg-light-second);
   transition: all .4s ease-in;
   caret-color: transparent;
-  &:before {
+  &-bg-line {
     position: absolute;
     content: ' ';
     z-index: 1;
@@ -49,12 +64,18 @@ const props = defineProps({
     top: 0;
     height: 100%;
     width: 19%;
-    background-color: var(--bg-vue-color);
   }
   &__slider {
     width: 35%;
     z-index: 5;
     overflow: hidden;
+    .single-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: .5rem;
+      border: 1px solid var(--border-color);
+    }
   }
   &__body {
     width: 65%;
@@ -81,7 +102,7 @@ const props = defineProps({
   .work-card {
     height: auto;
     align-items: center;
-    &:before {
+    &-bg-line {
       left: 0;
       top: 0;
       height: 20%;

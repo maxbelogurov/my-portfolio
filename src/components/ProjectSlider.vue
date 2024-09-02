@@ -4,18 +4,17 @@
       <div class="glide__slides">
         <img v-for="img in props.images" class="glide__slide"
              :src="`/src/assets/images/works/${img}`" :alt="img">
-
       </div>
     </div>
     <div class="controls" data-glide-el="controls">
-      <button class="btn-clear btn-prev" data-glide-dir="<">
+      <button :style="mainStore.isMobile ? `color: ${props.color}` : ''" class="btn-clear btn-prev" data-glide-dir="<">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
         </svg>
       </button>
     </div>
     <div class="controls" data-glide-el="controls">
-      <button class="btn-clear btn-next" data-glide-dir=">">
+      <button :style="`color: ${props.color}`" class="btn-clear btn-next" data-glide-dir=">">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
         </svg>
@@ -37,18 +36,16 @@ const glideContainer = ref(null);
       startAt: 0,
       perView: 1,
     }
-    // if (mainStore.isMobile) {
-    //   glideOption.peek = {
-    //     before: 20,
-    //     after: 20
-    //   }
-    // }
     const glide = new Glide(glideContainer.value, glideOption);
     glide.mount()
   });
 
 const props = defineProps({
-  images: Object
+  images: Object,
+  color: {
+    type: String,
+    default: '#333333'
+  }
 })
 </script>
 
@@ -62,7 +59,6 @@ const props = defineProps({
     grid-column: span 2;
     border-radius: .5rem;
     overflow: hidden;
-    //border:1px solid var(--border-color);
   }
   img {
     height: 100%;
