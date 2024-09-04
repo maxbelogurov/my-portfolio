@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <NavProjects v-model="activeSection"/>
       <section class="row">
-        <TransitionGroup name="list"  mode="out-in">
+        <TransitionGroup name="list">
           <ProjectCard v-for="project in activeProjects" :project="project" :key="project.website"/>
         </TransitionGroup>
       </section>
