@@ -10,6 +10,13 @@
     "contacts": "Контакты"
   },
   "projects": {
-    "btn_website": "Сайт"
+    "btn_website": "Сайт",
+    "sections": {
+      "All": "Все",
+      "Vue": "Vue",
+      "Js": "JavaScript",
+      "Layout": "Верстка",
+      "CMS": "Сайты"
+    }
   }
 }

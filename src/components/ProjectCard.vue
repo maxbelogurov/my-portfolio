@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-lg-6 mb-4">
+  <div class="col-12 col-lg-6 mb-4 work-card-wrap">
     <div class="work-card rounded-3 p-4 d-flex flex-column flex-sm-row gap-4">
       <div class="work-card-bg-line" :style="`background-color: ${projectColor()}`"></div>
       <div v-if="props.project.images?.length > 1" class="work-card__slider rounded-3">
@@ -11,7 +11,7 @@
       <div class="work-card__body d-flex flex-column justify-content-between gap-4 gp-md-0">
         <div>
           <h4 class="work-card__body-title mb-4">{{ props.project.title[$i18n.locale] }}</h4>
-          <p class="work-card__body-name h4 mb-4">{{ props.project.company }}</p>
+          <p class="work-card__body-name h4 mb-4" :style="`color: ${projectColor()}`">{{ props.project.company }}</p>
           <p class="work-card__body-desc text-muted mb-0">{{ props.project.description[$i18n.locale]}}</p>
         </div>
         <div class="work-card__body-stack d-flex justify-content-center flex-wrap gap-2">
@@ -20,7 +20,7 @@
                :alt="stack"
                class="stack-logo">
         </div>
-        <div class="work-card__body-bottom d-flex justify-content-between">
+        <div class="work-card__body-bottom d-flex justify-content-between align-items-center">
           <a v-if="props.project.git" :href="props.project.git" class="btn-clear btn-card" target="_blank">Github</a>
           <WaterButton class="ms-auto" :color="projectColor()" :text="$t('projects.btn_website')" :href="props.project.website" :target_blank="true"/>
         </div>
@@ -33,6 +33,7 @@
 import ProjectSlider from '../components/ProjectSlider.vue'
 import WaterButton from '../modules/WaterButton.vue'
 import {computed} from "vue";
+
 const props = defineProps({
   project: Object
 })
@@ -44,6 +45,15 @@ function projectColor() {
     'Layout': '#519adb',
   }
   return colorsSections[section]
+}
+function projectSection() {
+  const section = props.project.section
+  const titlesSections = {
+    'Vue': 'Vue JS',
+    'Js': 'Java Script',
+    'Layout': '#519adb',
+  }
+  return titlesSections[section]
 }
 </script>
 

@@ -70,7 +70,7 @@ export const myProjects = [
         git: false,
         title: {
             ru: 'Блокчейн-стратегия',
-            en: 'Boots catalog for kids',
+            en: 'Blockchain Strategy',
         },
         description: {
             ru: 'Одностраничник на Bootstrap 4 под уникальный проект на рынке майнинга',

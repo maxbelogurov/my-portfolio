@@ -10,6 +10,13 @@
     "contacts": "Contacts"
   },
   "projects": {
-    "btn_website": "Website"
+    "btn_website": "Website",
+    "sections": {
+      "All": "All",
+      "Vue": "Vue",
+      "Js": "JavaScript",
+      "Layout": "Layout",
+      "CMS": "Website"
+    }
   }
 }
