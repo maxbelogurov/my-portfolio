@@ -46,15 +46,6 @@ function projectColor() {
   }
   return colorsSections[section]
 }
-function projectSection() {
-  const section = props.project.section
-  const titlesSections = {
-    'Vue': 'Vue JS',
-    'Js': 'Java Script',
-    'Layout': '#519adb',
-  }
-  return titlesSections[section]
-}
 </script>
 
 <style lang="scss">

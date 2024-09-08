@@ -1,8 +1,12 @@
 <template>
   <div class="d-flex justify-content-center gap-5 py-5 mb-5 rounded-3 nav-project">
-    <div class="btn-clear nav-project__radio flex-grow-1" v-for="section in sections">
+    <div class="btn-clear nav-project__radio" v-for="section in sections">
+
       <input type="radio" :id="section" :value="section" v-model="active" />
-      <label :for="section">{{ $t(`projects.sections.${section}`)}}</label>
+      <label :for="section">
+        <img :src="`src/assets/images/sections/${section}.svg`" :alt=section>
+        {{ $t(`projects.sections.${section}`)}}
+        </label>
     </div>
   </div>
 </template>
@@ -22,13 +26,19 @@
       color: red;
     }
     &__radio label {
-      width: 100%;
+      user-select: none;
       text-align: center;
       flex-basis: 0;
-      flex-grow: 1;
       position: relative;
       padding: 1rem;
-      border: 1px solid #cbcbcb;
+      text-align: center;
+      display: block;
+      img {
+        padding-bottom: .5rem;
+        width: 2rem;
+        display: block;
+        margin: 0 auto;
+      }
       //&:after {
       //  content: '';
       //  position: absolute;
