@@ -1,10 +1,12 @@
 <template>
-  <div class="d-flex justify-content-center gap-5 py-5 mb-5 rounded-3 nav-project">
+  <div class="d-flex py-5 mb-5 rounded-3 nav-project">
     <div class="btn-clear nav-project__radio" v-for="section in sections">
-
       <input type="radio" :id="section" :value="section" v-model="active" />
-      <label :for="section">
-        <img :src="`src/assets/images/sections/${section}.svg`" :alt=section>
+      <label :for="section" :class="section === active ? section : ''">
+        <img :src="`src/assets/images/sections/${section}.svg`"
+             :class="section === active ? `active ${section}` : ''"
+
+             :alt=section>
         {{ $t(`projects.sections.${section}`)}}
         </label>
     </div>
@@ -18,46 +20,53 @@
 
 <style lang="scss">
   .nav-project {
-    background-color: var(--bg-light-second);
+    justify-content: center;
+    &__radio:hover > label img {
+      filter: grayscale(0);
+    }
     &__radio input {
       display: none;
     }
-    &__radio input:checked + label {
-      color: red;
+    &__radio img.active {
+      transform: translateY(-10px) scale(1.2) rotate(-9deg);
+      transition: all .3s ease-in-out;
+      filter: grayscale(0);
     }
     &__radio label {
-      user-select: none;
-      text-align: center;
-      flex-basis: 0;
       position: relative;
+      display: block;
+      width: 7rem;
+      flex-basis: 0;
       padding: 1rem;
       text-align: center;
-      display: block;
+      user-select: none;
       img {
-        padding-bottom: .5rem;
+        filter: grayscale(1);
+        position: relative;
+        transition: all .2s ease-in-out;
+        padding-bottom: .8rem;
         width: 2rem;
         display: block;
         margin: 0 auto;
       }
-      //&:after {
-      //  content: '';
-      //  position: absolute;
-      //  height: .2rem;
-      //  width: 1.2rem;
-      //  bottom: .5rem;
-      //  right: calc(50% - 0.6rem);
-      //  transition: 0.8s;
-      //  background: #a0a0a0;
-      //  border-top: 0.7px solid #959595;
-      //  border-bottom: 0.7px solid #c9c6c6;
-      //  border-radius: .2rem;
-      //}
-      //&:hover:after {
-      //  background: #2bd2ff;
-      //  border-top: 0.7px solid #5bd8fd;
-      //  border-bottom: 0.7px solid #5bd8fd;
-      //  box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff, 0 0 60px #2bd2ff;
-      //}
+    }
+  }
+  @media screen and (max-width: $my-medium-screen) {
+    .nav-project {
+      justify-content: space-between;
+      &__radio {
+
+      }
+      &__radio label {
+        width: auto;
+        padding: 0;
+        font-size: 0.9em;
+        img {
+          height: 2.5rem;
+          width: 2.5rem;
+          padding-bottom: 0.4rem;
+        }
+      }
     }
   }
 </style>

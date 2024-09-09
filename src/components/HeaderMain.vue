@@ -21,10 +21,10 @@
             <span class="text-muted small">{{ $t('header.subtitle') }}</span>
           </h4>
         </div>
-        <div class="col-6 col-lg-7 d-none d-md-block">
+        <div class="col-6 col-lg-6 d-none d-md-block">
           <NavMain />
         </div>
-        <div class="col-2 d-flex justify-content-end gap-3">
+        <div class="col-2 col-lg-3 d-flex justify-content-end gap-3">
           <ChangeLanguage/>
           <ChangeTheme/>
         </div>
