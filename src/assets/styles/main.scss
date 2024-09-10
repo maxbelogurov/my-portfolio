@@ -4,7 +4,6 @@ input:focus,
 select:focus {
   box-shadow: none !important;
 }
-//html {margin-right: calc(-1 * (100vw - 100%));}
 body, p, span, div, h1, h2, h3, h4, h5, h6 {
   color:var(--font-dark);
   transition: color .4s ease;
@@ -35,30 +34,8 @@ body, p, span, div, h1, h2, h3, h4, h5, h6 {
 .text-muted {
   color: var(--font-secondary) !important;
 }
-.link-orange-hover {
-  color: var(--font-dark);
-  -webkit-text-fill-color: var(--font-dark);;
-  &:focus {
-    color: var(--font-dark);
-  }
-  &:hover:not(.active) {
-    color: var(--font-dark);
-    background: linear-gradient(to left, var(--font-dark) 20%, $my-orange 40%, var(--font-dark) 60%, var(--font-dark) 80%);
-    background-size: 200% auto;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: shine;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    @keyframes shine {
-      from {
-        background-position-x: 120%;
-      }
-      to {
-        background-position-x: 0;
-      }
-    }
+@media screen and (min-width: $my-medium-screen) {
+  html {
+    scrollbar-gutter: stable both-edges; //убираем прыжок страницы при появлении полосы прокрутки
   }
 }

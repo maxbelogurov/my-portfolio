@@ -5,7 +5,12 @@
       <li v-for="item in nav"
           :key="item"
           class="nav-item">
-        <a class="nav-link link-orange-hover text-center" aria-current="page" href="#">{{ $t('nav_main.' + item) }}</a>
+        <router-link class="nav-link text-center"
+                    aria-current="page"
+                    :to="{ name: item }">
+          {{ $t('nav_main.' + item) }}
+        </router-link>
+
       </li>
     </ul>
   </nav>
@@ -31,6 +36,10 @@ const nav = ref([
   z-index: 10;
   .nav-link {
     font-size: px-to-rem(20);
+    color: var(--font-dark);
+  }
+  .router-link-active {
+    color: var(--purple-dark);
   }
 }
 </style>

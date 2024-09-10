@@ -1,7 +1,7 @@
 <template>
   <div class="locale-changer">
       <button
-          class="btn-clear link-orange-hover"
+          class="btn-clear"
           @click="changingLanguage()">
         {{ $t('header.btn_language_change') }}
       </button>
