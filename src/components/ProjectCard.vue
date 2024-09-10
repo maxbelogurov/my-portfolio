@@ -1,6 +1,6 @@
 <template>
-  <div class="col-12 col-lg-6 mb-4 work-card-wrap">
-    <div class="work-card rounded-3 p-4 d-flex flex-column flex-sm-row gap-4">
+  <div class="col-12 col-lg-6 mb-5 mb-md-4 work-card-wrap">
+    <div class="work-card rounded-3 p-3 p-md-4 d-flex flex-column flex-sm-row gap-4">
       <div class="work-card-bg-line" :style="`background-color: ${projectColor()}`"></div>
       <div v-if="props.project.images?.length > 1" class="work-card__slider rounded-3">
         <ProjectSlider :images="project.images" :color="projectColor()"/>

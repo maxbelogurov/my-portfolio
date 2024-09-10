@@ -1,11 +1,10 @@
 <template>
-  <div class="d-flex py-5 mb-5 rounded-3 nav-project">
+  <div class="d-flex py-5 rounded-3 nav-project">
     <div class="btn-clear nav-project__radio" v-for="section in sections">
       <input type="radio" :id="section" :value="section" v-model="active" />
-      <label :for="section" :class="section === active ? section : ''">
+      <label :for="section">
         <img :src="`src/assets/images/sections/${section}.svg`"
              :class="section === active ? `active ${section}` : ''"
-
              :alt=section>
         {{ $t(`projects.sections.${section}`)}}
         </label>

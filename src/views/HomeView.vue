@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-5">
+  <main class="mt-3">
     <div class="container-xxl">
       <NavProjects v-model="activeSection"/>
       <section class="row">
