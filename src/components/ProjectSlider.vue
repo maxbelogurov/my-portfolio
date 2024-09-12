@@ -3,7 +3,7 @@
     <div class="glide__track " data-glide-el="track">
       <div class="glide__slides">
         <img v-for="img in props.images" class="glide__slide"
-             :src="`/src/assets/images/works/${img}`" :alt="img">
+             :src="`/images/works/${img}`" :alt="img">
       </div>
     </div>
     <div class="controls" data-glide-el="controls">

@@ -6,7 +6,7 @@
         <ProjectSlider :images="project.images" :color="projectColor()"/>
       </div>
       <div v-else-if="props.project.images?.length === 1" class="work-card__slider rounded-3">
-        <img class="single-img" :src="`src/assets/images/works/${props.project.images[0]}`" alt="">
+        <img class="single-img" :src="`images/works/${props.project.images[0]}`" alt="">
       </div>
       <div class="work-card__body d-flex flex-column justify-content-between gap-4 gp-md-0">
         <div>
@@ -16,7 +16,7 @@
         </div>
         <div class="work-card__body-stack d-flex justify-content-center flex-wrap gap-2">
           <img v-for="stack in props.project.technologies"
-               :src="`src/assets/images/logos/${stack}.svg`"
+               :src="`images/logos/${stack}.svg`"
                :alt="stack"
                class="stack-logo">
         </div>

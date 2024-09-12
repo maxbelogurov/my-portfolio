@@ -3,7 +3,7 @@
     <div class="btn-clear nav-project__radio" v-for="section in sections">
       <input type="radio" :id="section" :value="section" v-model="active" />
       <label :for="section">
-        <img :src="`src/assets/images/sections/${section}.svg`"
+        <img :src="`images/sections/${section}.svg`"
              :class="section === active ? `active ${section}` : ''"
              :alt=section>
         {{ $t(`projects.sections.${section}`)}}

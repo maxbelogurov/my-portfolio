@@ -17,11 +17,16 @@ export default {
       const lng = this.$i18n.locale === 'en' ? 'ru' : 'en'
       this.$i18n.locale = lng
       localStorage.setItem('language', lng);
+      this.changingTitle()
+    },
+    changingTitle() {
+      document.title = this.$t("title");
     }
   },
   mounted() {
     const lng = localStorage.getItem('language');
     if (lng) { this.$i18n.locale = lng }
+    this.changingTitle()
   }
 }
 </script>
