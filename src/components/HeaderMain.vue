@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="col-8 col-md-4 col-lg-3 text-center text-md-start">
-          <h4 class="mb-0">
+          <h4 class="mb-0 main-title">
             {{ $t('header.title') }}<br>
             <span class="text-muted small">{{ $t('header.subtitle') }}</span>
           </h4>
@@ -48,6 +48,9 @@ const mobileMenuActive = ref(false)
 </script>
 
 <style lang="scss">
+.main-title {
+  height: 3.5rem;
+}
 .nav-header {
   .nav-link {
     font-size: px-to-rem(20);

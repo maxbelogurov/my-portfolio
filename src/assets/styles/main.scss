@@ -1,5 +1,6 @@
 
 button:focus,
+a:focus-visible,
 input:focus,
 select:focus {
   box-shadow: none !important;
@@ -32,6 +33,11 @@ body, p, span, div, h1, h2, h3, h4, h5, h6 {
 }
 .text-muted {
   color: var(--font-secondary) !important;
+}
+.text-color-gradient {
+  background: -webkit-linear-gradient(right, var(--purple-dark), var(--font-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (min-width: $my-medium-screen) {
   html {

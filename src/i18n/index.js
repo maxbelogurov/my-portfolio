@@ -8,6 +8,7 @@ const messages = {
 export const options = {
     legacy: false,
     locale: defaultLocale,
+    warnHtmlMessage: false, // disable warning HTML in message
     fallbackLocale: 'ru',
     messages,
 }
