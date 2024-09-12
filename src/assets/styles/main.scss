@@ -8,6 +8,7 @@ body, p, span, div, h1, h2, h3, h4, h5, h6 {
   color:var(--font-dark);
   transition: color .4s ease;
 }
+
 #app {
   background: var(--bg-light);
   //background: url("../images/bg-main.png") top center no-repeat;
@@ -36,6 +37,8 @@ body, p, span, div, h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: $my-medium-screen) {
   html {
+    background: var(--bg-light);
+    transition: all .4s ease-in;
     scrollbar-gutter: stable both-edges; //убираем прыжок страницы при появлении полосы прокрутки
   }
 }
