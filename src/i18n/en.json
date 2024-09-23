@@ -23,6 +23,9 @@
   "about": {
     "title": "Frontend Developer",
     "sub_title": "grade Middle (Vue JS)",
-    "summary": "Frontend разработчик с хорошим опытом работы во Vue js (как на option так и на composition), верстке сайтов и настройке CMS.<br> Последние несколько лет активно разрабатываю коммерческие приложения SPA, беру подработки по верстке и настройке cms, изучаю Английский и интересуюсь новыми техноголиями во Frontend. Создал собственную студию по разработке WEB сайтов и обслуживанию корпоративных клиентов в направлении системного администрирования и обслуживания техники. Умею работать с большим объемом данных, быстро обучаюсь. Имею хороший опыт общения с заказчиком, ответственен в сроках выполнения и соблюдении требований."
+    "summary": "Frontend developer with good experience in Vue js (option and composition) , website layout and CMS setup.<br>The last two years I create commercial SPA web application and website layout, learning English and new technology in Frontend.<br> I had my own small company that developed websites and making corporate clients service in system administration and equipment maintenance.<br> I know how to work with large amount of data, can learn quickly. I have a good experience in keeping good relations and communications with customers and also, I’m responsible for deadlines and requirements accordance.",
+    "skills": {
+      "title": "Skills"
+    }
   }
 }

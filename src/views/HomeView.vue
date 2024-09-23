@@ -15,7 +15,7 @@
 import {computed, ref} from "vue";
 import ProjectCard from '../components/ProjectCard.vue'
 import NavProjects from "../components/NavProjects.vue";
-import {myProjects} from "../myProjects";
+import {myProjects} from "../constants/myProjects";
 const projects = ref(myProjects)
 const activeProjects = computed(() =>{
       if (activeSection.value === 'All') {

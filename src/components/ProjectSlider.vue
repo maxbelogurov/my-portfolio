@@ -83,7 +83,6 @@ const props = defineProps({
   .card-slider-box {
     grid-template-rows: 100%;
     grid-template-columns: 1.5rem auto 1.5rem;
-    //gap: 0;
     .glide__track {
       grid-column: auto;
       order: 1;
