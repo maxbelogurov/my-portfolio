@@ -6,7 +6,7 @@
           <h3 class="text-color-gradient d-inline-block fs-1 ">{{ $t('about.works.title') }}</h3>
         </div>
       </div>
-      <div class="works-wrap row">
+      <div class="works-wrap row mb-5">
         <div class="work-item" v-for="work in myWorks" :key="work.date_start">
           <div class="work-item__date">
             <span>{{work.date_start}}</span>

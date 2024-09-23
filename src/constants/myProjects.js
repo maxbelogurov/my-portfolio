@@ -65,7 +65,7 @@ export const myProjects = [
     },
     {
         section: 'Js',
-        company: '-',
+        company: 'RS School',
         website: 'http://portfolio.blogmax.ru/js_project/game-snake/',
         git: false,
         title: {

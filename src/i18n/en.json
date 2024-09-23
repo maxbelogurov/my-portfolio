@@ -29,6 +29,9 @@
     },
     "works": {
       "title": "Work experience"
+    },
+    "education": {
+      "title": "Education"
     }
   }
 }

@@ -4,6 +4,7 @@
         :class="props.direction ? `flex-${props.direction}` : ''">
       <li v-for="item in nav"
           :key="item"
+          @click="$emit('closeMenu')"
           class="nav-item">
         <router-link class="nav-link text-center"
                     aria-current="page"
@@ -40,6 +41,32 @@ const nav = ref([
   }
   .router-link-active {
     color: var(--purple-dark);
+  }
+}
+@media screen and (max-width: $my-medium-screen) {
+  .nav-header {
+    .nav-link {
+      opacity: 0.75;
+    }
+    .router-link-active {
+      opacity: 1;
+      color: var(--font-dark);
+      position: relative;
+      transition: .4s;
+      &:before,
+      &:after {
+        position: absolute;
+        transition: all .4s;
+      }
+      &:before {
+        content: '{';
+        margin-left: -1rem;
+      }
+      &:after {
+        content: '}';
+        margin-left: 0.5rem;
+      }
+    }
   }
 }
 </style>

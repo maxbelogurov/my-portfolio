@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="mobile-menu d-block d-md-none"
            :class="mobileMenuActive ? 'active' : ''">
-        <NavMain direction="column"/>
+        <NavMain direction="column" @close-menu="mobileMenuActive = false"/>
         <MobileMenuBg/>
       </div>
       <div class="row align-items-center justify-content-between">
