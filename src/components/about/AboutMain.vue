@@ -68,6 +68,7 @@
 }
 @media screen and (max-width: 768px) {
   .about-main {
+    font-size: px-to-rem(16);
     &__container {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;

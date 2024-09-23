@@ -2,11 +2,11 @@
   <section>
     <div class="container-xxl">
       <div class="row">
-        <div class="col-4 mb-5">
+        <div class="col-12 mb-5">
           <h3 class="text-color-gradient d-inline-block fs-1 ">{{ $t('about.skills.title') }}</h3>
         </div>
       </div>
-      <div class="skills-wrap row">
+      <div class="skills-wrap row mb-3">
         <div class="skill-item col-12 col-md-6 col-lg-4 mb-3 mb-md-5" v-for="skill in mySkills">
           <div class="skill-item__img">
             <img :class="skill.title === 'Github' && githubWhiteIcon() ? 'github' : ''"
@@ -15,7 +15,7 @@
           </div>
           <div class="skill-item__body">
             <h4>{{skill.title}}</h4>
-            <p class="text-muted small">{{skill.description[$i18n.locale]}}</p>
+            <p class="text-muted">{{skill.description[$i18n.locale]}}</p>
           </div>
         </div>
       </div>
