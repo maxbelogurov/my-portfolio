@@ -80,6 +80,22 @@ export const myProjects = [
         images: ['game-snake.jpg'],
     },
     {
+        section: 'Js',
+        company: 'RS School',
+        website: 'http://portfolio.blogmax.ru/js_project/audio-player/',
+        git: false,
+        title: {
+            ru: 'Проигрыватель',
+            en: 'Audio player',
+        },
+        description: {
+            ru: 'Простой аудио плейер на JS',
+            en: 'Simple audio player on JS'
+        },
+        technologies: ['js'],
+        images: ['audio-player.jpg'],
+    },
+    {
         section: 'Layout',
         company: 'GM Synergy',
         website: 'http://portfolio.blogmax.ru/pages/gmsynergy/',
@@ -142,5 +158,21 @@ export const myProjects = [
         },
         technologies: ['html', 'css', 'bootstrap'],
         images: ['homedesert_1.jpg', 'homedesert_2.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'Blogmax.ru',
+        website: 'https://blogmax.ru/',
+        git: false,
+        title: {
+            ru: 'Моя web-студия',
+            en: 'My web studio',
+        },
+        description: {
+            ru: 'Для привлечения клиентов создал сайт своей web-студии',
+            en: "I've created web studio for attract clients"
+        },
+        technologies: ['joomla', 'bootstrap', 'js'],
+        images: ['blogmax.ru_1.jpg', 'blogmax.ru_2.jpg', 'blogmax.ru_3.jpg'],
     },
 ]

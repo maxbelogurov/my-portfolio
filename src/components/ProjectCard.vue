@@ -43,6 +43,7 @@ function projectColor() {
     'Vue': '#42B883',
     'Js': '#ddc60e',
     'Layout': '#519adb',
+    'CMS': '#f29555'
   }
   return colorsSections[section]
 }
