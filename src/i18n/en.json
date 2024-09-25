@@ -36,5 +36,9 @@
     "education": {
       "title": "Education"
     }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "code": "Code examples"
   }
 }

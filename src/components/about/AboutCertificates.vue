@@ -78,13 +78,7 @@ import {myCertificates} from "../../constants/myCertificates";
       }
       &__title {
         text-align: center;
-        a {
-          color: var(--font-dark);
-          text-decoration: none;
-        }
-        a:hover {
-          color: var(--purple-dark);
-        }
+
       }
     }
   }
