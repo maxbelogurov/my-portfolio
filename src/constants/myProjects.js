@@ -161,7 +161,7 @@ export const myProjects = [
     },
     {
         section: 'CMS',
-        company: 'Blogmax.ru',
+        company: 'Blogmax',
         website: 'https://blogmax.ru/',
         git: false,
         title: {
@@ -174,5 +174,117 @@ export const myProjects = [
         },
         technologies: ['joomla', 'bootstrap', 'js'],
         images: ['blogmax.ru_1.jpg', 'blogmax.ru_2.jpg', 'blogmax.ru_3.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'MDecor',
+        website: 'https://mdecor.ru/',
+        git: false,
+        title: {
+            ru: 'Конструктор халатов',
+            en: 'Robe design constructor',
+        },
+        description: {
+            ru: 'Магазин на платформе 1С Битрикс с конструктором дизайна халатов на чистом JS',
+            en: "Store on the 1C Bitrix platform with a robe design constructor in JS"
+        },
+        technologies: ['bitrix', 'bootstrap', 'js'],
+        images: ['mdecor.ru_1.jpg', 'mdecor.ru_2.jpg', 'mdecor.ru_3.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'Dunlop boots',
+        website: 'http://dunlopboots.ru/',
+        git: false,
+        title: {
+            ru: 'Каталог Dunlop boots',
+            en: 'Catalog Dunlop boots',
+        },
+        description: {
+            ru: 'Каталог на платформе CMS Joomla в фирменном стиле компании. Верстка на Bootstrap',
+            en: "Catalog on the CMS Joomla platform in the corporate style of the company. Layout on Bootstrap"
+        },
+        technologies: ['joomla', 'bootstrap'],
+        images: ['dunlopboots.ru_1.jpg', 'dunlopboots.ru_2.jpg', 'dunlopboots.ru_3.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'ErgoDesign',
+        website: 'https://ergode.ru/',
+        git: false,
+        title: {
+            ru: 'Магазин мебели',
+            en: 'Furniture store',
+        },
+        description: {
+            ru: 'Интернет-магазин ортопедической мебели. Разработан на Opencart + шаблон + JS',
+            en: "Online store of orthopedic furniture. Developed on Opencart + template + JS"
+        },
+        technologies: ['opencart', 'js'],
+        images: ['ergode.ru_1.jpg', 'ergode.ru_2.jpg', 'ergode.ru_3.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'MEGA',
+        website: 'http://www.megatir.com/',
+        git: false,
+        title: {
+            ru: 'Компания грузоперевозок',
+            en: 'Freight transport company',
+        },
+        description: {
+            ru: 'Простой информативный сайт компании международных грузовых перевозок',
+            en: "Simple informative website of an international freight transportation company"
+        },
+        technologies: ['html', 'css', 'js'],
+        images: ['megatir.com_1.jpg', 'megatir.com_2.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'BBC Audit',
+        website: 'https://bbc-audit.ru/index.php',
+        git: false,
+        title: {
+            ru: 'Аудиторская компания',
+            en: 'Audit company',
+        },
+        description: {
+            ru: 'Простой информативный сайт компании международных грузовых перевозок',
+            en: "Information site of an audit company, CMS Joomla + light design"
+        },
+        technologies: ['joomla'],
+        images: ['bbc-audit.ru_1.jpg', 'bbc-audit.ru_2.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'SACLA',
+        website: 'https://sacla.ru/',
+        git: false,
+        title: {
+            ru: 'Каталог спецодежды',
+            en: 'Workwear Catalog',
+        },
+        description: {
+            ru: 'Каталог товаров спецоджежды, интеграция с 1С',
+            en: "Catalog of workwear products, integration with 1C"
+        },
+        technologies: ['bitrix', 'bootstrap'],
+        images: ['sacla.ru_1.jpg', 'sacla.ru_2.jpg', 'sacla.ru_3.jpg'],
+    },
+    {
+        section: 'CMS',
+        company: 'De Vintage',
+        website: 'https://de-vintage.ru/',
+        git: false,
+        title: {
+            ru: 'Магазин винтажных товаров',
+            en: 'Vintage things store',
+        },
+        description: {
+            ru: 'Магазин на OpenCart c доработками в дизайне',
+            en: "OpenCart store with design improvements"
+        },
+        technologies: ['opencart'],
+        images: ['de-vintage.ru_1.jpg', 'de-vintage.ru_2.jpg', 'de-vintage.ru_3.jpg'],
     },
 ]

@@ -2,8 +2,8 @@
   <main>
     <AboutMain/>
     <AboutCertificates/>
-    <AboutWorks/>
     <AboutSkills/>
+    <AboutWorks/>
     <AboutEducations/>
   </main>
 </template>
