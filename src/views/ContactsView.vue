@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="contacts-map  col-12 col-md-6">
+        <div class="contacts-map col-12 col-md-6 mb-5 md-md-0">
           <ContactsMap/>
         </div>
       </div>
