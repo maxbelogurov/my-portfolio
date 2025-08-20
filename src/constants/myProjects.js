@@ -1,6 +1,22 @@
 export const myProjects = [
     {
         section: 'Vue',
+        company: 'БИМ',
+        website: 'https://bim39.ru/',
+        git: false,
+        title: {
+            ru: 'Каталог тротуарной плитки',
+            en: 'Catalog of paving slabs',
+        },
+        description: {
+            ru: 'Сайт компании с каталогом продукции по технологии SSG',
+            en: 'Company`s website with catalog of product created on SSG technology'
+        },
+        technologies: ['nuxt', 'vue', 'vite', 'pinia'],
+        images: ['bim39.ru_1.jpg', 'bim39.ru_2.jpg', 'bim39.ru_3.jpg'],
+    },
+    {
+        section: 'Vue',
         company: 'FAST.ONLINE',
         website: 'https://fast-online.ru/',
         git: false,
