@@ -5,6 +5,30 @@ export const myWorks = [
       en: 'Frontend developer'
     },
     company: {
+      ru: 'ООО "Роуттех"',
+      en: 'LLC "RouteTech"'
+    },
+    date_start: '11.2025',
+    date_end: 'present',
+    description: {
+      ru: `<p>Разработка административных панелей управления.</p>
+           <p>Основной стек: Vue3, Pinia, Axios, Tailwind</p>
+           <p>Взаимодействие с back-end по rest api и WebSocket</p>
+           <p>Командная работа в GitLab</p>
+           <p>Dev и Prod окружения</p>`,
+      en: `<p>Development of administrative control panels.</p>
+           <p>Main stack: Vue 3, Pinia, Axios, Tailwind</p>
+           <p>Backend interaction: via REST API and WebSocket</p>
+           <p>Teamwork: in GitLab</p>
+           <p>Dev and Prod environments</p>`
+    }
+  },
+  {
+    job_title: {
+      ru: 'Frontend разработчик',
+      en: 'Frontend developer'
+    },
+    company: {
       ru: 'RestMonster',
       en: 'RestMonster'
     },
@@ -24,18 +48,18 @@ export const myWorks = [
                <li>работа с Dev и prod окружением</li>
                <li>интеграция i18n</li>
            </ul>`,
-      en: `<p>Созданеие с нуля полного функционала административной панели для управления сайтами ресторанов на Vue 3 по технологии SPA.</p>
-           <p>Панель позволяет клиентам создавать, настраивать и управлять сайтом ресторана. Добавление меню с вариантами, опциями и модификаторами. Отслеживание, редактирование и изменение статусов заказов с сайта ресторана. Управление картой зон доставки и многое другое.</p>
+      en: `<p>Building from scratch the full functionality of an admin panel for managing restaurant websites using Vue 3, based on SPA technology.</p>
+           <p>The panel allows clients to create, configure, and manage a restaurant website. It includes adding menus with variants, options, and modifiers, tracking, editing, and changing the status of orders coming from the restaurant website, managing the delivery zone map, and many other features.</p>
            <ul>
-               <li>Авторизация через aws cognito</li>
-               <li>Полное взаимодействие с back-end по rest api</li>
-               <li>Vuex для управления состоянием</li>
-               <li>Vue-Router для маршрутизации</li>
-               <li>По вёрстке 99% bootstrap</li>
-               <li>Интеграция ymaps и vue, отрисовка зон, определение адреса, сохранение состояния</li>
-               <li>работа с git (GitLab)</li>
-               <li>работа с Dev и prod окружением</li>
-               <li>интеграция i18n</li>
+               <li>Authorization via AWS Cognito</li>
+               <li>Full backend interaction through REST API</li>
+               <li>Vuex for state management</li>
+               <li>Vue Router for routing</li>
+               <li>99% Bootstrap for layout/styling</li>
+               <li>Integration of Yandex Maps (ymaps) with Vue: rendering zones, address detection, state persistence</li>
+               <li>Working with Git (GitLab)</li>
+               <li>Working with Dev and Prod environments</li>
+               <li>i18n integration</li>
            </ul>`
     }
   },
@@ -54,9 +78,9 @@ export const myWorks = [
       ru: `<p>Верстка шаблонов по готовым дизайнам figma.</p>
            <p>Установка шаблона под системы управления сайтом: 1С Битрикс, WordPress.</p>
            <p>Внедрение нового функционала на сайты заказчиков, обновление существующего дизайна</p>`,
-      en: `<p>Верстка шаблонов по готовым дизайнам figma.</p>
-           <p>Установка шаблона под системы управления сайтом: 1С Битрикс, WordPress.</p>
-           <p>Внедрение нового функционала на сайты заказчиков, обновление существующего дизайна</p>`
+      en: `<p>Creating templates based on ready-made Figma designs.</p>
+           <p>Setting up templates for content management systems: 1C-Bitrix, WordPress.</p>
+           <p>Implementing new functionality on client websites and updating existing designs.</p>`
     }
   },
   {
