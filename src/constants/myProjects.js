@@ -82,7 +82,7 @@ export const myProjects = [
     {
         section: 'Js',
         company: 'RS School',
-        website: 'http://portfolio.blogmax.ru/js_project/game-snake/',
+        website: 'http://blogmax.ru/js_project/game-snake/',
         git: false,
         title: {
             ru: 'Игра змейка',
@@ -98,7 +98,7 @@ export const myProjects = [
     {
         section: 'Js',
         company: 'RS School',
-        website: 'http://portfolio.blogmax.ru/js_project/audio-player/',
+        website: 'http://blogmax.ru/js_project/audio-player/',
         git: false,
         title: {
             ru: 'Проигрыватель',
@@ -114,7 +114,7 @@ export const myProjects = [
     {
         section: 'Layout',
         company: 'GM Synergy',
-        website: 'http://portfolio.blogmax.ru/pages/gmsynergy/',
+        website: 'http://blogmax.ru/pages/gmsynergy/',
         git: false,
         title: {
             ru: 'Блокчейн-стратегия',
@@ -130,7 +130,7 @@ export const myProjects = [
     {
         section: 'Layout',
         company: 'Your travel',
-        website: 'http://portfolio.blogmax.ru/pages/yourtravel',
+        website: 'http://blogmax.ru/pages/yourtravel',
         git: false,
         title: {
             ru: 'Твоё путешествие',
@@ -146,7 +146,7 @@ export const myProjects = [
     {
         section: 'Layout',
         company: 'Еврострой',
-        website: 'http://portfolio.blogmax.ru/pages/eurostroy/',
+        website: 'http://blogmax.ru/pages/eurostroy/',
         git: false,
         title: {
             ru: 'Еврострой',
@@ -162,7 +162,7 @@ export const myProjects = [
     {
         section: 'Layout',
         company: 'Home Desert',
-        website: 'http://portfolio.blogmax.ru/pages/homedessert/',
+        website: 'http://blogmax.ru/pages/homedessert/',
         git: false,
         title: {
             ru: 'Кондитерская Home Desert',
@@ -178,7 +178,7 @@ export const myProjects = [
     {
         section: 'CMS',
         company: 'Blogmax',
-        website: 'https://blogmax.ru/',
+        website: '',
         git: false,
         title: {
             ru: 'Моя web-студия',
