@@ -2,7 +2,7 @@ export const myCertificates = [
   {
     title: 'React course',
     img: 'react-course.jpg',
-    link: 'https://www.testdome.com/certificates/4c3fbdeea35a407fb3c9a5a03a67da89'
+    link: 'https://learn.javascript.ru/courses/react-20240916/maxbelogurov/en/certificate.jpg'
   },
   {
     title: 'Vue JS',

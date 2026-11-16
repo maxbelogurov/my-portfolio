@@ -1,8 +1,8 @@
 export const myWorks = [
   {
     job_title: {
-      ru: 'Frontend разработчик',
-      en: 'Frontend developer'
+      ru: 'Старший frontend-разработчик',
+      en: 'Senior Frontend Developer'
     },
     company: {
       ru: 'ООО "Роуттех"',
@@ -21,6 +21,25 @@ export const myWorks = [
            <p>Backend interaction: via REST API and WebSocket</p>
            <p>Teamwork: in GitLab</p>
            <p>Dev and Prod environments</p>`
+    }
+  },
+  {
+    job_title: {
+      ru: 'Старший frontend-разработчик',
+      en: 'Senior Frontend Developer'
+    },
+    company: {
+      ru: 'ShopEarnPro',
+      en: 'ShopEarnPro'
+    },
+    date_start: '06.2026',
+    date_end: '11.2026',
+    description: {
+      ru: `<p>Руководил frontend-направлением: команда из 3 frontend-разработчиков, взаимодействие с 4 backend-инженерами в проекте численностью 15 человек.</p>
+           <p>Работа по Scrum и переход от готового шаблона к собственной реализации интерфейсов на Vue.js.</p>`,
+      en: `<p>Led the frontend stream, managing a team of 3 frontend developers and collaborating with 4 backend engineers within a 15-person project.</p>
+           <p>Worked in a Scrum environment and spearheaded the migration from an off-the-shelf template to a custom Vue.js UI implementation.</p>
+           <p>Backend interaction: via REST API and WebSocket</p>`
     }
   },
   {
